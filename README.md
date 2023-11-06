@@ -1,16 +1,35 @@
 # Take home README
 
-This is a rails take home project from Turing. This readme will walk through getting this repo running locally, endpoint usuage, and some metric data.
+This is a rails project with locust testing being used for an optional class at Turing. 
 
 ## Installing this repository
 ### Version Info
   - Ruby 3.2.2
   - Rails 7.0.8
-### Running the repo  
-  - Clone and fork this repo
-  - Run ```bundle install``` 
-  - Run ```rails db:{drop,create,migrate}``` to setup the postgresQL database. You can also run the ```rails db:seed``` command after if you would like to have mock data seeded into the database.
-  - Run ```bundle exec rspec``` to run the full test suite. There should be 20 test passing with 100% simplecov coverage.
+  - Python 3.12.0
+  - Locust 2.17.0
+
+### Running the repo
+
+First Install python and locust
+  - ```brew install python3``` to install python
+  - ```python3 --version``` and make sure it says 3.12.0
+  - ```pip3 install locust``` to install locust
+  -  ```locust -V``` and make sure it says 2.17.0
+    
+Then clone this repo and in your repo's terminal run:
+  - ```bundle install``` 
+  - ```rails db:{drop,create,migrate,seed}``` to setup the postgresQL database.
+  - ```bundle exec rspec``` to run the full test suite. There should be 20 test passing
+
+
+
+
+
+
+
+
+
 ###  Schema
   ![Screenshot 2023-11-02 at 2 46 14 PM](https://github.com/ILyell/take_home_project/assets/127703036/b974b548-9051-43b9-bb21-72e4377b5dc0)
 
