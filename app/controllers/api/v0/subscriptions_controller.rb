@@ -6,7 +6,7 @@ class Api::V0::SubscriptionsController < ApplicationController
     rescue ActionController::ParameterMissing, NoMethodError => e
         render json: { message: "Invalid request", errors: e }, status: 422
     rescue ActiveRecord::RecordInvalid => e
-        render json: { message: "Validation Failed", errors: e }, status: :not_found
+        render json: { message: "Validation Failed", errors: e }, status: 404
     end
 
     def unsubscribe
@@ -17,7 +17,7 @@ class Api::V0::SubscriptionsController < ApplicationController
     rescue ActionController::ParameterMissing, NoMethodError => e
         render json: { message: "Invalid request", errors: e }, status: 422
     rescue ActiveRecord::RecordNotFound => e
-        render json: { message: "Subscription not found", errors: e }, status: :not_found
+        render json: { message: "Subscription not found", errors: e }, status: 404
     end
 
     private

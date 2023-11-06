@@ -1,6 +1,4 @@
-
-
-# This file should contain all the record creation needed to seed the database with its default values.
+This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -9,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 r = Random.new
 teas = []
-10000.times do
+1000.times do
     tea = { 
         title: Faker::Tea.variety,
         description: Faker::Tea.type,
